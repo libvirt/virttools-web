@@ -1,0 +1,19 @@
+  Virt Tools static site
+  ======================
+
+This directory contains content / configuration for managing
+
+    http(s)://virttools.org
+    http(s)://virt-tools.org
+    http(s)://www.virttools.org
+    http(s)://www.virt-tools.org
+
+The site is setup to run under OpenShift
+
+Initial load can be done with
+
+  oc process -f virttools-web/openshift/templates/virttools-web.json  | oc create -f -
+
+Updates to the OpenShift config are manually activated using 'oc replace'.
+
+Updates to the content itself are automatically propagated via a web hook.

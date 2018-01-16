@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Virt Tools</title>
+
+  <link rel="stylesheet" href="index.css"/>
+</head>
+<body>
+
+  <div id="header">
+    <h1>Open source virtualization collaboration</h1>
+    <h2>Follow <a href="http://planet.virt-tools.org/">the blog planet</a> for news &amp; information from project contributors</h2>
+  </div>
+
+  <div id="body">
+    <div class="project">
+      <h2><a href="http://qemu.org">QEMU</a></h2>
+
+      <p>
+	<a href="http://qemu.org">QEMU <img src="logo-qemu.png"></a>
+	is a generic and open source machine emulator and virtualizer.
+	When used as an emulator, QEMU can run OSes and programs made
+	for one machine (e.g. an ARM board) on a different machine (e.g. your
+	own x86_64 PC). When used as a virtualizer, QEMU achieves near native
+	performance by executing the guest code directly on the host CPU
+	using KVM.
+      </p>
+    </div>
+
+    <div class="project">
+      <h2><a href="http://www.linux-kvm.org">KVM</a></h2>
+
+      <p>
+	<a href="http://www.linux-kvm.org">KVM <img src="logo-kvm.png"></a>
+	(for Kernel-based Virtual Machine) is a full virtualization
+	solution for Linux on hardware containing virtualization extensions.
+	It consists of a loadable kernel module that exposes virtualization
+	APIs to userspace for use by applications such as QEMU.
+      </p>
+    </div>
+
+    <div class="project clear">
+      <h2><a href="http://libvirt.org">Libvirt</a></h2>
+
+      <p>
+	<a href="http://libvirt.org">libvirt <img src="logo-libvirt.png"></a>
+	is a library and daemon providing a stable open source API for
+	managing virtualization hosts. It targets multiple hypervisors
+	including QEMU, KVM, LXC, Xen, OpenVZ, VMWare ESX, VirtualBox
+	and more.
+      </p>
+    </div>
+
+    <div class="project">
+      <h2><a href="http://libguestfs.org">Libguestfs</a></h2>
+
+      <p>
+	<a href="http://libguestfs.org">libguestfs <img src="logo-libguestfs.png"></a>
+	is a set of tools for accessing and modifying virtual
+	machine (VM) disk images. You can use this for viewing and editing
+	files inside guests, scripting changes to VMs, monitoring disk used
+	/ free statistics, creating guests, P2V, V2V, performing backups,
+	cloning VMs, building VMs, formatting disks, resizing disks, and
+	much more.
+      </p>
+    </div>
+
+    <div class="project clear">
+      <h2><a href="http://virt-manager.org">virt-manager</a></h2>
+
+      <p>
+	<a href="http://virt-manager.org">virt-manager <img src="logo-virt-manager.png"></a>
+	is a desktop user interface for managing virtual machines
+	through libvirt. It primarily targets KVM VMs, but also manages Xen and LXC.
+	It also includes the command line provisioning tool virt-install.
+      </p>
+    </div>
+
+    <div class="project">
+      <h2><a href="http://libosinfo.org">libosinfo</a></h2>
+
+      <p>
+	<a href="http://libosinfo.org">libosinfo <img src="logo-libosinfo.png"></a>
+	provides a database of information about operating
+	system releases to assist in optimally configuring hardware
+	when deploying virtual machines. It includes a C library for
+	querying information in the database, which is also accessible
+	from any language supported by GObject Introspection.
+      </p>
+    </div>
+  </div>
+
+
+  <div id="footer">
+    <a href="https://www.openshift.com/" title="Powered by OpenShift Online">
+      <img alt="Powered by OpenShift Online" src="https://www.openshift.com/images/logos/powered_by_openshift_reverse.png">
+    </a>
+  </div>
+</body>
+</html>

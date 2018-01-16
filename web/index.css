@@ -1,0 +1,74 @@
+
+body, #header h1, #header h2 {
+    padding: 0px;
+    margin: 0px;
+}
+
+#header, #footer {
+    background: rgb(0,0,0) url(header-bg.png) repeat-x top left;
+    height: 115px;
+    padding-right: 20px;
+    margin-bottom: 70px;
+}
+#header h1 {
+    background: url(logo.png) no-repeat center left;
+    height: 115px;
+    text-align: right;
+    width: 100%;
+    color: rgb(192,192,192);
+    font-size: 34px;
+}
+#header h2 {
+    width: 100%;
+    text-align: right;
+    font-size: 18px;
+    padding-top: 5px;
+    padding-right: 20px;
+    font-style: italic;
+    font-weight: normal;
+}
+
+#footer {
+    clear: both;
+    margin-bottom: 0px;
+    text-align: right;
+    height: 80px;
+}
+
+#footer img {
+    padding: 10px;
+}
+
+div.project {
+    float: left;
+
+    width: 30%;
+    margin-left: 8%;
+    margin-right: 8%;
+    margin-bottom: 3em;
+}
+
+
+div.clear {
+    clear: both;
+}
+
+
+div.project p {
+    position: relative;
+}
+
+div.project p img {
+    padding: 10px;
+    float: right;
+}
+
+a, a:visited {
+    color: rgb(22,80,120);
+    text-decoration: none;
+}
+
+
+div.project h2 {
+    border-bottom: 1px solid rgb(120,120,120);
+}

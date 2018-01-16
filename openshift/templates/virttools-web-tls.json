@@ -1,0 +1,82 @@
+{
+    "apiVersion": "v1",
+    "kind": "Template",
+    "labels": {
+        "app": "virttools-web",
+        "template": "virttools-web"
+    },
+    "message": "The following service(s) have been created in your project: ${NAME}.\n",
+    "metadata": {
+        "name": "virtttools-web",
+        "annotations": {
+            "openshift.io/display-name": "Virt Tools",
+            "description": "Static web for virt-tools.org",
+            "tags": "quickstart,httpd",
+            "iconClass": "icon-apache",
+            "openshift.io/long-description": "Template for virttools.org static web content",
+            "openshift.io/provider-display-name": "Libvirt",
+            "template.openshift.io/bindable": "false"
+        }
+    },
+    "objects": [
+        {
+            "kind": "Route",
+            "apiVersion": "v1",
+            "metadata": {
+                "name": "www.virt-tools.org"
+            },
+            "spec": {
+                "host": "www.virt-tools.org",
+                "to": {
+                    "kind": "Service",
+                    "name": "${NAME}"
+                },
+		"tls": {
+		    "termination": "edge",
+		    "insecureEdgeTerminationPolicy": "Redirect",
+		    "key": "${TLS_KEY}",
+		    "certificate":  "${TLS_CERT}"
+		}
+            }
+        },
+        {
+            "kind": "Route",
+            "apiVersion": "v1",
+            "metadata": {
+                "name": "www.virttools.org"
+            },
+            "spec": {
+                "host": "www.virttools.org",
+                "to": {
+                    "kind": "Service",
+                    "name": "${NAME}"
+                },
+		"tls": {
+		    "termination": "edge",
+		    "insecureEdgeTerminationPolicy": "Redirect",
+		    "key": "${TLS_KEY}",
+		    "certificate":  "${TLS_CERT}"
+		}
+            }
+        }
+    ],
+    "parameters": [
+        {
+            "name": "NAME",
+            "displayName": "Name",
+            "description": "The name assigned to all of the frontend objects defined in this template.",
+            "required": true,
+            "value": "virttools-web"
+        },
+        {
+            "name": "TLS_KEY",
+            "displayName": "TLS key for public routes",
+            "description": "TLS key for public routes"
+        },
+        {
+            "name": "TLS_CERT",
+            "displayName": "TLS cert for public routes",
+            "description": "TLS cert for public routes"
+        }
+    ]
+}
