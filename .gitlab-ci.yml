@@ -1,0 +1,9 @@
+
+image: centos:8
+
+pages:
+  script:
+    - /bin/true
+  artifacts:
+    paths:
+      - public
