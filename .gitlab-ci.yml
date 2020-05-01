@@ -18,6 +18,7 @@ check-dco:
 
 pages:
   image: centos:8
+  stage: build
   script:
     - /bin/true
   artifacts:
